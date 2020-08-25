@@ -24,10 +24,10 @@ module.exports = [
                 {
                     test: /\.s[ac]ss$/i,
                     use: [
-                        { loader: 'style-loader', options: { sourceMap: true } },
-                        { loader: 'css-loader' },
-                        { loader: 'postcss-loader' },
-                        { loader: 'sass-loader' },
+                        {loader: 'style-loader', options: {sourceMap: true}},
+                        {loader: 'css-loader'},
+                        {loader: 'postcss-loader'},
+                        {loader: 'sass-loader'},
                     ],
                 },
                 {
