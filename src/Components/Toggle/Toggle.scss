@@ -1,5 +1,5 @@
-@import '../../Styles/Partials/templates';
-@import '../../Styles/Partials/variables';
+@import '../../Styles/Partials/_templates.scss';
+@import '../../Styles/Partials/_variables.scss';
 
 .toggle {
   position: relative;
@@ -49,5 +49,4 @@
   &__input:checked + &__slider:before {
     transform: translateX(26px);
   }
-
 }
