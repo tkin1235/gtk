@@ -1,0 +1,23 @@
+@import "../../Styles/Partials/templates";
+@import "../../Styles/Partials/variables";
+
+
+.main {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  transition: background-color $transitionTiming ease-in-out;
+  box-sizing: border-box;
+  padding:50px 5.25%;
+
+  &--light {
+    background: $lightThemeBackground;
+    color: $lightThemeFontColor;
+  }
+
+  &--dark {
+    background: $darkThemeBackground;
+    color: $darkThemeFontColor
+  }
+}

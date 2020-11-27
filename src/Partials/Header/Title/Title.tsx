@@ -1,11 +1,12 @@
 import React from 'react';
 import './Title.scss';
+import {StyleNode} from "../../../Components/ThemeNodes/StyleNode";
 
-export const Title = () => {
+export const Title = (): JSX.Element => {
 
     return (
-        <div className="title">
-            <h1>Dedicated to the merging of user experience and business functionality</h1>
-        </div>
+        <StyleNode className="title">
+            <StyleNode className={"title__heading"}>Dedicated to the merging of user experience and business functionality</StyleNode>
+        </StyleNode>
     );
 }

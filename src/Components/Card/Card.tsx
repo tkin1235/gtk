@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.scss';
+import {StyleNode} from "../ThemeNodes/StyleNode";
 
 interface CardProps {
     icon?: string,
@@ -9,10 +10,10 @@ interface CardProps {
 
 export const Card = ({icon: icon, title: title, copy: copy}: CardProps): JSX.Element => {
     return (
-        <div className="card">
-            <div className="cart__icon">{icon}</div>
-            <div className="card__title">{title}</div>
-            <div className="card__copy">{copy}</div>
-        </div>
+        <StyleNode className="card">
+            <StyleNode className="card__icon">{icon}</StyleNode>
+            <StyleNode className="card__title">{title}</StyleNode>
+            <StyleNode className="card__copy">{copy}</StyleNode>
+        </StyleNode>
     );
 };

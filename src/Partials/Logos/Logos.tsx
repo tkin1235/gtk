@@ -1,5 +1,6 @@
 import React from 'react';
 import './Logos.scss';
+import {StyleNode} from "../../Components/ThemeNodes/StyleNode";
 
 interface OverviewProps {
     logos?: Array<SVGElement>
@@ -7,14 +8,14 @@ interface OverviewProps {
 
 export const Logos = ({logos: logos}: OverviewProps): JSX.Element => {
     return (
-        <div className="logos">
+        <StyleNode className="logos">
             {logos && logos.map((logo) => {
                 return (
-                    <div className={"logos__logo"}>
+                    <StyleNode className={"logos__logo"}>
                         {logo}
-                    </div>
+                    </StyleNode>
                 )
             })}
-        </div>
+        </StyleNode>
     );
 }
