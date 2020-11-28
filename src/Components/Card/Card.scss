@@ -1,0 +1,54 @@
+//@import "../../Styles/Partials/templates";
+@import "../../Styles/Partials/variables";
+
+// Default styles for tiny screens (300+)
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+
+    height:100%;
+
+    &--dark {
+      .card__icon__svg {
+        path {
+          fill: $darkThemeFontColor;
+        }
+      }
+    }
+
+    &--light {
+      .card__icon__svg {
+
+      }
+    }
+
+    &__svg {
+      width: 20%;
+      margin-bottom: 14px;
+
+      path {
+        transition: fill $transitionTiming ease-in-out;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+
+  &__copy {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 21px;
+  }
+}
+
+// Kick off columns on larger devices
+@media screen and (min-width: 400px) {
+  @import "Card--400up";
+}

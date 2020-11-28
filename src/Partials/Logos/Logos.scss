@@ -1,0 +1,29 @@
+@import "../../Styles/Partials/variables";
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  &__logo {
+    &:last-child:nth-child(3n - 2) {
+      grid-column-end: 3;
+    }
+
+    &--dark {
+      .logos__logo__svg {
+        fill: $darkThemeFontColor;
+      }
+    }
+  } 
+}
+
+// Kick off columns on larger devices
+@media screen and (min-width: 400px) {
+  @import "Logos--400up";
+}
+
+// Kick off columns on larger devices
+@media screen and (min-width: 768px) {
+  @import "Logos--768up";
+}

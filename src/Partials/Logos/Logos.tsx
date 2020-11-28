@@ -3,16 +3,16 @@ import './Logos.scss';
 import {StyleNode} from "../../Components/ThemeNodes/StyleNode";
 
 interface OverviewProps {
-    logos?: Array<SVGElement>
+    logos?: Array<React.FunctionComponent<React.SVGProps<SVGSVGElement>>>
 }
 
 export const Logos = ({logos: logos}: OverviewProps): JSX.Element => {
     return (
         <StyleNode className="logos">
-            {logos && logos.map((logo) => {
+            {logos && logos.map((Logo) => {
                 return (
                     <StyleNode className={"logos__logo"}>
-                        {logo}
+                        <Logo className={"logos__logo__svg"} />
                     </StyleNode>
                 )
             })}

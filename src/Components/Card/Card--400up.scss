@@ -1,0 +1,26 @@
+.card {
+  &__icon {
+    &--dark {
+      .card__icon__svg {
+        path {
+        }
+      }
+    }
+
+    &--light {
+      .card__icon__svg {
+      }
+    }
+
+    &__svg {
+      path {
+      }
+    }
+  }
+
+  &__title {
+  }
+
+  &__copy {
+  }
+}

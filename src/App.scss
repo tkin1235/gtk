@@ -44,4 +44,8 @@
   &--active {
     opacity: 1;
   }
+
+  &__parent {
+    position: relative;
+  }
 }
