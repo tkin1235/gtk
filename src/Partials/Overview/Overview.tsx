@@ -14,19 +14,19 @@ export const Overview = (): JSX.Element => {
         <StyleNode BEMClass="overview">
             <Card icon={Universal.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>}
                   title={"Universal"}
-                  copy={"Web applications should be accessible to everyone."}/>
+                  copy={"The web should be accessible to everyone."}/>
 
             <Card icon={Intuitive.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>}
                   title={"Intuitive"}
-                  copy={"I love to build applications that users enjoy."}/>
+                  copy={"I love to build applications that users want."}/>
 
             <Card icon={Collaborative.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>}
                   title={"Collaborative"}
-                  copy={"Design, product, and development teams don’t work in a bubble"}/>
+                  copy={"Design, product, and development teams don’t work in a bubble."}/>
 
             <Card icon={Maintainable.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>}
                   title={"Maintainable"}
-                  copy={"Fixing bugs isn’t such a chore if the code makes sense and is well tested."}/>
+                  copy={"Support isn’t such a chore if the code is well organized and tested."}/>
         </StyleNode>
     );
 }
