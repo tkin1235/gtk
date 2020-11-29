@@ -20,7 +20,7 @@ export const Toggle = (): JSX.Element => {
             <input onChange={() => {
                 onChange()
             }} type={"checkbox"} className="toggle__input"/>
-            <StyleNode className="toggle__slider"/>
+            <StyleNode BEMClass="toggle__slider"/>
         </LabelNode>
     );
 }

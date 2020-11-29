@@ -1,21 +1,57 @@
 @import "../../Styles/Partials/variables";
 
+$logosLightThemeSubduedFill: #d9d9d9;
+$logosLightThemeSubduedFillActive: #999;
+
 .logos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  margin-bottom: 45px;
+  margin-top: 30px;
 
   &__logo {
+
+    &__svg {
+      transition: fill $transitionTiming ease-in-out;
+      opacity: 1;
+
+      &.active {
+        opacity: 0.9;
+      }
+    }
+
     &:last-child:nth-child(3n - 2) {
       grid-column-end: 3;
     }
 
     &--dark {
       .logos__logo__svg {
+        opacity: 0.6;
         fill: $darkThemeFontColor;
+        transition: $transitionTiming ease-in-out opacity;
+      }
+
+      &.active {
+        .logos__logo__svg {
+          opacity: 0.35;
+        }
       }
     }
-  } 
+
+    &--light {
+      .logos__logo__svg {
+        fill: $logosLightThemeSubduedFill;
+      }
+
+      &.active {
+        .logos__logo__svg {
+          fill: $logosLightThemeSubduedFillActive;
+        }
+      }
+
+    }
+  }
 }
 
 // Kick off columns on larger devices

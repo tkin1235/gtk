@@ -1,0 +1,42 @@
+@import "../../Styles/Partials/variables";
+
+.footer {
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+
+  &--light {
+    .footer__icon {
+      svg {
+        transition: $transitionTiming ease-in-out fill;
+        fill: black;
+      }
+
+      &:hover, &:active, &:focus {
+        svg {
+          fill:#999;
+        }
+      }
+    }
+  }
+
+  &--dark {
+    .footer__icon {
+      svg {
+        opacity: 0.8;
+        fill: $darkThemeFontColor;
+        transition: $transitionTiming ease-in-out opacity;
+      }
+
+      &:hover, &:active, &:focus {
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 75px;
+  }
+}

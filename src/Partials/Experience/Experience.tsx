@@ -5,8 +5,8 @@ import {Accordion} from "../../Components/Accordion/Accordion";
 
 export const Experience = (): JSX.Element => {
     return (
-        <StyleNode className="experience">
-            <StyleNode className={"experience__title"}>Professional experience</StyleNode>
+        <div className="experience">
+            <StyleNode BEMClass={"experience__title"}>Professional experience</StyleNode>
             
             <Accordion date={'November 2018 - Current'} company={"HomeSpotter"} location={'Minneapolis'} title={"Senior Product Developer"} items={[
                 // Responsible for...
@@ -48,6 +48,6 @@ export const Experience = (): JSX.Element => {
             <Accordion date={'December 2012 - March 2014'} company={'Ecreativeworks'} location={'Plymouth'} title={'Web Developer'} items={[
                 'Developing OSCommerce websites for B2B companies.'
             ]} />
-        </StyleNode>
+        </div>
     );
 }

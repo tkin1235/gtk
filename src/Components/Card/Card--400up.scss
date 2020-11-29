@@ -1,4 +1,6 @@
 .card {
+  flex-direction: column;
+
   &__icon {
     &--dark {
       .card__icon__svg {
@@ -13,12 +15,16 @@
     }
 
     &__svg {
+      width: 20%;
+      margin-bottom: 14px;
+
       path {
       }
     }
   }
 
   &__title {
+    font-size: 18px;
   }
 
   &__copy {

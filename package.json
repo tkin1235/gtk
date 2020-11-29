@@ -10,8 +10,9 @@
     "@types/node": "^12.12.54",
     "html-loader": "^1.2.1",
     "node-sass": "^4.14.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
+    "react-interval": "^2.1.1",
     "react-scripts": "3.4.3",
     "reset-css": "^5.0.1",
     "webpack-hot-middleware": "^2.25.0"

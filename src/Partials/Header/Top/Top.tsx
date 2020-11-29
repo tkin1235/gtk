@@ -5,9 +5,9 @@ import {StyleNode} from "../../../Components/ThemeNodes/StyleNode";
 
 export const Top = (): JSX.Element => {
     return (
-        <StyleNode className="top">
-            <StyleNode className="top__logo">Galen Kistler</StyleNode>
-            <StyleNode className="top__toggle"><Toggle /></StyleNode>
+        <StyleNode BEMClass="top">
+            <StyleNode BEMClass="top__logo">Galen Kistler</StyleNode>
+            <StyleNode BEMClass="top__toggle"><Toggle /></StyleNode>
         </StyleNode>
     );
 }

@@ -9,12 +9,14 @@ interface CardProps {
 }
 export const Card = ({icon: Icon, title: title, copy: copy}: CardProps): JSX.Element => {
     return (
-        <StyleNode className="card">
-            <StyleNode className="card__icon">
+        <StyleNode BEMClass="card">
+            <StyleNode BEMClass="card__icon">
                 <Icon className={"card__icon__svg"} />
             </StyleNode>
-            <StyleNode className="card__title">{title}</StyleNode>
-            <StyleNode className="card__copy">{copy}</StyleNode>
+            <div className="card__content-wrap">
+                <StyleNode BEMClass="card__title">{title}</StyleNode>
+                <StyleNode BEMClass="card__copy">{copy}</StyleNode>
+            </div>
         </StyleNode>
     );
 };

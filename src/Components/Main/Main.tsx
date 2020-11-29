@@ -5,6 +5,7 @@ import {Header} from "../../Partials/Header/Header";
 import {Overview} from "../../Partials/Overview/Overview";
 import {Logos} from "../../Partials/Logos/Logos";
 import {Experience} from "../../Partials/Experience/Experience";
+import {Footer} from "../../Partials/Footer/Footer";
 
 // images
 import * as Aws from "../../Images/aws.svg"
@@ -21,27 +22,27 @@ import * as webpack from "../../Images/webpack.svg"
 interface MainProps {
 }
 
-
 export const Main = ({}: MainProps): JSX.Element => {
     return (
-        <StyleNode className={`main`}>
+        <StyleNode BEMClass={`main`}>
             <Header/>
             <Overview/>
 
             <Logos
                 logos={[
-                    Aws.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    css.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    github.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    html.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    mysql.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    node.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    php.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
-                    react.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
                     ts.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    react.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    php.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    mysql.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
                     webpack.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    html.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    css.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    Aws.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    node.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+                    github.default as unknown as React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
                 ]}/>
             <Experience/>
+            <Footer />
         </StyleNode>
     );
 };

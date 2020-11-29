@@ -10,19 +10,27 @@ import {DarkThemeName, LightThemeName, useTheme} from "../../Contexts/ThemeConte
  * @param props
  * @constructor
  */
-export const StyleNode = (props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>): JSX.Element => {
+interface StyleNodeProps {
+    // This only works for a single className, @todo array support?
+    BEMClass: string
+}
+
+export const StyleNode = (props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & StyleNodeProps): JSX.Element => {
     const theme = useTheme();
     const isTextNode = typeof props.children === 'string';
 
+    // Destructure the object to remove non HTML compliant attributes from our props
+    const {BEMClass, ...HTMLProps} = props
+
     const themeClassNames =
         // Passed in class name, e.g. `.element`
-        props.className + ' ' +
+        BEMClass + ' ' +
 
         // Passed in class name with theme modifier, e.g. `.element--light`
-        props.className + '--' + theme?.theme + ' ' +
+        BEMClass + '--' + theme?.theme + ' ' +
 
         // If the node is a text-node, give it --text modifier, e.g. `.element--text`
-        (isTextNode ? (props.className + '--text') : '');
+        (isTextNode ? (BEMClass + '--text') : '');
 
     /**
      * This is a "break" in BEM convention to include a namespace of an element above the block, however this is a requirement of the child that the parent is relatively positioned
@@ -39,14 +47,17 @@ export const StyleNode = (props: React.DetailedHTMLProps<React.HTMLAttributes<HT
      * The reason of doing this (instead of changing the font style of the same DOM nodes), is to get around the limitations around animating font changes,
      * so instead we toggle the opacity of each node, and absolutely position one of the nodes (arbitrarily?).
      * This requires setting a relative position on the parent of the text node, or you'll see some differences in word-wrapping when the absolutely positioned text is displayed (causing jumps in content).
+     *
+     * @todo determine if it's worth unmounting the unused nodes??
+     * aka what is the cost of mounting/unmounting these text nodes?
      */
     return (
-        <div {...props} className={themeClassNames}>
+        <div {...HTMLProps} className={themeClassNames + ' ' + (HTMLProps.className ?? '')}>
             {!isTextNode && props.children}
             {isTextNode &&
             <div className={themeClassNames + ' ' + getTextNodeParentClassNames(isTextNode)}>
                 <div className={
-                    (`text-node`) + (theme?.theme === LightThemeName ? '--active ' : (` text-node `)) +
+                    (`text-node `) + (`text-node`) + (theme?.theme === LightThemeName ? '--active ' : (` text-node `)) +
                     (`text-node--${LightThemeName}`)
                 }>
                     {props.children}

@@ -6,7 +6,7 @@ import {StyleNode} from "../../Components/ThemeNodes/StyleNode";
 
 export const Header = (): JSX.Element => {
     return (
-        <StyleNode className="header">
+        <StyleNode BEMClass="header">
             <Top/>
             <Title/>
         </StyleNode>
