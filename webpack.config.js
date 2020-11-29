@@ -8,7 +8,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = [
     {
-        watch: mode === 'development',
+        watch: mode !== 'development',
         entry: './src/index.tsx',
         target: 'web',
         mode,
