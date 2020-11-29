@@ -49,7 +49,7 @@ module.exports = [
         },
         output: {
             filename: 'client.js',
-            path: path.join(__dirname, 'dist', 'public')
+            path: path.join(__dirname, 'dist')
         },
         plugins: [
             new HtmlWebPackPlugin({
