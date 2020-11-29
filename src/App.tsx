@@ -5,7 +5,7 @@ import {Main} from "./Components/Main/Main";
 
 const App = (): JSX.Element => {
     return (
-        <div className={`App`}>
+        <div className={`App app-0.0.1`}>
             <ThemeProvider>
                 <Main />
             </ThemeProvider>
